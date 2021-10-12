@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="icon" href="./img/mi-logo .ico">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+</head>
+
+<body>
+    <div id="body" class="clearfix">
+        <div class="leftfix banner"></div>
+        <div class="main">
+            <div class="title clearfix">
+                <div class="logo clearfix leftfix">
+                    <img src="./img/mi-logo.png" alt="" class="leftfix">
+                    <span class="leftfix">小米账号</span>
+                </div>
+                <div class="rightfix language">
+                    中文(简体)
+                    <div class="triangle"></div>
+                    <ul class="clearfix ">
+                        <li>‎‎中文(繁體)‎</li>
+                        <li>‎English</li>
+                    </ul>
+                </div>
+                <span class="rightfix"></span>
+                <ul class="rightfix clearfix ">
+                    <li><a href="">用户协议</a></li>
+                    <li><a href="">隐私政策</a></li>
+                    <li><a href="">帮助中心</a></li>
+                </ul>
+            </div>
+            <form action="">
+                <div class="login">
+                    <div class="way">
+                        <a href="javascript:void(0);" class="logn">登录</a>
+                        <a href="javascript:void(0);" class="regi">注册</a>
+                        <div class="outline" pageType='log'></div>
+                    </div>
+                    <div class="loginAndRegister clearfix">
+                        <div class="login-main leftfix">
+                            <div class="username">
+                                <div class="user-input log-input">
+                                    <input type="text" name="user" class="int login-int">
+                                    <label class="user-lable">邮箱/手机号码/小米ID</label>
+                                </div>
+                                <div class="text">请输入账号</div>
+                            </div>
+                            <div class="username">
+                                <div class="user-input log-input">
+                                    <img src="./img/iron-01.png" class="eyes" alt="" img-type="close">
+                                    <input type="password" name="pw" class="int login-int">
+                                    <label class="user-lable">密码</label>
+                                </div>
+                                <div class="text">请输入登录密码</div>
+                            </div>
+                            <!-- layui-btn -->
+                            <button type="button" class="login-btn">登录</button>
+                            <div class="rember clearfix">
+                                <div class="leftfix left"><a href="">忘记密码？</a></div>
+                                <div class="rightfix right"><a href="">手机号登录</a></div>
+                            </div>
+
+                        </div>
+                        <div class="register-main leftfix login-main">
+                            <div class="username">
+                                <div class="user-input log-input">
+                                    <input type="text" name="user" class="int register-int"  int-tel="tel">
+                                    <label class="user-lable">手机号</label>
+                                </div>
+                                <div class="text tel">请输入手机号</div>
+                            </div>
+                            <div class="username">
+                                <div class="user-input log-input">
+                                    <img src="./img/iron-01.png" class="eyes" alt="" img-type="close">
+                                    <input type="password" name="pw" class="int register-int">
+                                    <label class="user-lable">密码</label>
+                                </div>
+                                <div class="text">请输入登录密码</div>
+                            </div>
+                            <div class="username">
+                                <div class="user-input log-input">
+                                    <img src="./img/iron-01.png" class="eyes" alt="" img-type="close">
+                                    <input type="password" name="newpw" class="int register-int">
+                                    <label class="user-lable">密码</label>
+                                </div>
+                                <div class="text">请再次输入登录密码</div>
+                            </div>
+                            <button type="button" class="register-btn">注册</button>
+                        </div>
+                    </div>
+                    <div class="other">其他方式登录</div>
+                    <div class="divul">
+                        <ul class="clearfix">
+                            <li><a href=""><img src="./img/zfb.png" alt=""></a></li>
+                            <li><a href=""><img src="./img/wx.png" alt=""></a></li>
+                            <li><a href=""><img src="./img/qq.png" alt=""></a></li>
+                            <li><a href=""><img src="./img/wb.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+            <p>小米公司版权所有-京ICP备10046444- <a href="">京公网安备11010802020134号</a>-京ICP证110507号</p>
+        </div>
+
+    </div>
+    <script src="./layui/layui.js"></script>
+    <script src="./layer/layer.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script>
+        //1.获取节点对象
+        let loginPage = $$('.logn');
+        let registerPage = $$('.regi');
+        let loginAndRegister = $$('.loginAndRegister');
+        let outline = $$('.outline');
+        let user = document.querySelectorAll('.user-input');
+        let int = document.querySelectorAll('.int');
+        let loginInt = document.querySelectorAll('.login-int');
+        let registerInt = document.querySelectorAll('.register-int');
+        // console.log(loginInt,registerInt);
+        let loginBtn = $$('.login-btn');
+        let registerBtn = $$('.register-btn');
+        let eye = document.querySelectorAll('.eyes');
+        let flagBtn = 0; //判断所有输入框中是否都有值且符和格式 有为1 无为0
+        let verFlag = 1; //判断手机号验证是否符合规范  不符合为0，
+        let time = '';
+        //从首页点击注册
+        let search = location.search;
+        //手机号验证的正则表达式
+        let regtel = /^1[3-9]{1}\d{9}/;
+
+        // console.log(search);
+
+        //2.遍历绑定事件
+        user.forEach(v => {
+            v.addEventListener('click', function () {
+                // console.log(this);
+                this.querySelector('.int').focus();
+                this.querySelector('.user-lable').style.top = '6px';
+                this.querySelector('.user-lable').style.fontSize = '12px';
+            });
+        });
+        //输入框得到焦点和失去焦点
+        int.forEach(v => {
+            v.addEventListener('focus', function () {
+                let text = this.value; //获取输入框中的数据
+                this.parentNode.style.border = '1px solid #ff5c00';
+                this.parentNode.style.boxShadow = '0 0 5px 0';
+                if (text) {
+                    this.parentNode.style.background = '#f9f9f9';
+                    this.nextElementSibling.style.color = '#aaaaaa';
+                }
+            });
+            v.addEventListener('blur', function () {
+                let text = this.value;
+                if (!text) { //输入框中无数据
+                    this.nextElementSibling.style.top = '20px';
+                    this.nextElementSibling.style.fontSize = '17px';
+                    this.parentNode.style.background = '#fcf2f3';
+                    this.nextElementSibling.style.color = '#f04645'
+                    this.parentNode.parentNode.querySelector('.text').style.display = 'block';
+
+                } else { //有数据
+                    this.parentNode.parentNode.querySelector('.text').style.display = 'none';
+                    this.parentNode.style.background = '#f9f9f9';
+                    this.nextElementSibling.style.color = '#aaaaaa';
+                }
+                this.parentNode.style.border = 0;
+                this.parentNode.style.boxShadow = '';
+                // console.log(flagBtn);
+                //查看当前是登录还是注册页面
+                let type = outline.getAttribute('pageType');
+                if (type == 'log') {
+                    intTypeFn(loginInt, loginBtn, true);
+                } else if (type == 'reg') {
+                    //获取自定义属性，判断当前输入框是否是输入手机号的那一个
+                    let inpType = v.getAttribute('int-tel');
+                    // console.log(inpType);
+                    if (inpType == 'tel') {//是
+                        let val = this.value;
+                        // console.log(val);
+                        if (!regtel.test(val)) { //手机号不合法
+                            verFlag = 0;
+                            $$('.tel').style.display = 'block';
+                            $$('.tel').innerHTML = '手机号不合法，请重新输入';
+                            // console.log(verFlag);
+                        } else {
+                            verFlag = 1;
+                            // console.log(verFlag);
+                        }
+                    }
+                    intTypeFn(registerInt, registerBtn);
+                }
+            })
+        });
+        //输入框样式改变
+        function intTypeFn(obj, btn) {
+            let flag = true;
+            // 遍历接收到的输入框对象
+            obj.forEach(k => {
+                if (!k.value) {
+                    flag = false;
+                }
+            });
+            //登录注册按钮样式改变
+            if (flag && verFlag) {//判断输入框中是否都有数据和正则验证  条件必须同时满足
+                btn.style.background = '#ff5c00';
+                btn.classList.remove('btn-disabled');
+                btn.style.cursor = 'pointer';
+                flagBtn = 1;
+
+            } else {
+                btn.style.background = '#ffbe99';
+                btn.classList.add('btn-disabled');
+                btn.style.cursor = '';
+                flagBtn = 0;
+            }
+
+            return flagBtn;
+        }
+
+        // 登录、注册页面转换
+        loginPage.addEventListener('click', function () {
+            move(outline, 0);
+            move(loginAndRegister, -400);
+            registerPage.style.color = '#c0c0c0';
+            this.style.color = '#333333';
+
+            outline.setAttribute('pageType', 'log');
+        });
+        registerPage.addEventListener('click', function () {
+            move(outline, 70);
+            move(loginAndRegister, -810);
+            loginPage.style.color = '#c0c0c0';
+            this.style.color = '#333333';
+            outline.setAttribute('pageType', 'reg');
+            // verify();
+        });
+        //点击查看密码
+        eye.forEach(v => {
+            v.addEventListener('click', function () {
+                // console.log(this.src);
+                let id = this.getAttribute('img-type');
+                if (id == 'close') {
+                    this.src = './img/iron-05.png';
+                    this.nextElementSibling.type = 'text';
+                    this.setAttribute('img-type', 'open');
+                } else {
+                    this.src = './img/iron-01.png';
+                    this.nextElementSibling.type = 'password';
+                    this.setAttribute('img-type', 'close');
+                }
+            });
+        })
+
+        /***************登录模块*************/
+        //给登录按钮绑定点击事件
+        loginBtn.addEventListener('click', function () {
+            let username = loginInt[0].value;
+            let pwd = loginInt[1].value;
+
+            if (flagBtn) {
+                ajax.get('http://localhost/xiaomi/server/index.php', {
+                    fn: 'get',
+                    user: username,
+                    pwd: pwd,
+                    selectType: 'allcheck' //账号、密码都要查
+                }).then(data => {
+                    // console.log(data);
+                    // 4 判断结果
+                    if (data == 1) { //数据库中有此用户信息
+                        localStorage.setItem('username', username);
+                        location.href = 'http://localhost/xiaomi/index.html';
+                    } else { //无
+                        user[1].nextElementSibling.style.display = 'block';
+                        user[1].nextElementSibling.innerHTML = 'Network Error';
+                        localStorage.setItem('username', '');
+                    }
+                });
+            }
+        });
+        /***************注册模块*************/
+        registerBtn.addEventListener('click', function () {
+            // console.log(int.length);
+            let temp = intTypeFn(registerInt, registerBtn);
+            // console.log(temp);
+            if (temp) {
+                // 获取输入框中的值
+                let username = registerInt[0].value;
+                let pw = registerInt[1].value;
+                let newpw = registerInt[2].value;
+                // console.log(username,pw,newpw);
+                if (pw == newpw) {
+                    //先判断数据库中是否有此用户
+                    ajax.get('http://localhost/xiaomi/server/index.php', {
+                        fn: 'get',
+                        user: username,
+                        pwd: pw,
+                        selectType: 'partCheck' //只查账号
+                    }).then(data => {
+                        if (data == 1) { //数据库中有此用户信息
+                            user[4].nextElementSibling.style.display = 'block';
+                            user[4].nextElementSibling.innerHTML = '用户已存在！';
+                        } else {
+                            ajax.get('http://localhost/xiaomi/server/index.php', {
+                                fn: 'add',
+                                user: username,
+                                pwd: pw
+                            }).then(data => {
+                                layer.msg('注册成功');
+                                loginInt[0].value = username;
+                                loginInt[1].value = pw;
+
+                                let time = setTimeout(() => {
+                                    loginPage.click();
+                                    user[0].click();
+                                    user[1].click();
+                                }, 2000);
+                            });
+                        }
+                    });
+                } else {
+                    user[4].nextElementSibling.style.display = 'block';
+                    user[4].nextElementSibling.innerHTML = '两次输入的密码不一致，请重新输入！';
+                }
+            }
+        });
+        search == '?register' && registerPage.click();
+
+
+
+        //注册手机号格式验证
+        // verify()
+        // function verify() {
+        //     //查看当前是登录还是注册页面
+        //     let type = outline.getAttribute('pageType');
+        //     if (type == 'reg') {
+        //         let val;
+        //         // let number=/\d+/;//数字类型
+        //         registerInt[0].addEventListener('blur', function () {
+        //             val = this.value;
+        //             // console.log(val);
+        //             if (!regtel.test(val)) { //手机号不合法
+        //                 verFlag = 0;
+
+        //                 $$('.tel').style.display = 'block';
+        //                 $$('.tel').innerHTML = '手机号不合法，请重新输入';
+        //                 console.log(verFlag);
+        //             }
+        //         });
+        //     }
+        // }
+
+        //滚动函数
+        function move(obj, target) {
+            clearInterval(obj.time);
+            obj.time = setInterval(function () {
+                //步进值 缓动算法：(目标值-现在的位置)/10
+                var step = (target - obj.offsetLeft) / 10;
+                //步进值取整
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (target == obj.offsetLeft) {
+                    clearInterval(time);
+                } else obj.style.marginLeft = obj.offsetLeft + step + 'px';
+            }, 15);
+        }
+    </script>
+</body>
+
+</html>

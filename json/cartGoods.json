@@ -1,0 +1,71 @@
+[
+    {
+      "id": 1,
+      "src": "./img/goods1.webp",
+      "name": "小米10S 素皮保护壳",
+      "price": 99,
+      "review":"3.6万人好评"
+    },
+    {
+      "id": 2,
+      "src": "./img/goods2.webp",
+      "name": "小米10S 素皮保护壳",
+      "price": 99,
+      "review":"3.6万人好评"
+    },
+    {
+      "id": 3,
+      "src": "./img/goods3.webp",
+      "name": "小米10S 素皮保护壳",
+      "price": 99,
+      "review":"3.6万人好评"
+    },
+    {
+      "id": 4,
+      "src": "./img/goods4.webp",
+      "name": "小米10S 素皮保护壳",
+      "price": 99,
+      "review":"3.6万人好评"
+    },
+    {
+      "id": 5,
+      "src": "./img/goods5.webp",
+      "name": "小米10S 素皮保护壳",
+      "price": 99,
+      "review":"3.6万人好评"
+    },
+    {
+      "id": 6,
+      "src": "./img/goods6.webp",
+      "name": "小米10S 素皮保护壳",
+      "price": 99,
+      "review":"3.6万人好评"
+    },
+    {
+      "id": 7,
+      "src": "./img/goods7.webp",
+      "name": "小米10S 素皮保护壳",
+      "price": 99,
+      "review":"3.6万人好评"
+    },
+    {
+      "id": 8,
+      "src": "./img/goods8.webp",
+      "name": "小米10S 素皮保护壳",
+      "price": 99,
+      "review":"3.6万人好评"
+    },
+    {
+        "id": 9,
+        "src": "./img/goods9.webp",
+        "name": "小米10S 素皮保护壳",
+        "price": 99,
+        "review":"3.6万人好评"
+      }, {
+        "id": 10,
+        "src": "./img/goods10.webp",
+        "name": "小米10S 素皮保护壳",
+        "price": 99,
+        "review":"3.6万人好评"
+      }
+  ]

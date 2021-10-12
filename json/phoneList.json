@@ -1,0 +1,60 @@
+[
+    {
+      "id": 11,
+      "src": "http://localhost/xiaomi/img/phone-小米8青春版.jpg",
+      "name": "Xiaomi 8 青春版",
+      "info":"小米8 青春版 轻薄",
+      "nowPrice": 2599,
+      "pePrice":0
+    },
+    {
+        "id": 12,
+        "src": "http://localhost/xiaomi/img/phone-小米8屏幕指纹版.png",
+        "name": "Xiaomi MIX 4",
+        "info":"CUP全面屏",
+        "nowPrice": 4999,
+        "pePrice":0
+      }, {
+        "id": 13,
+        "src": "http://localhost/xiaomi/img/phone-红米S2.jpg",
+        "name": "Note 10 Pro",
+        "info":"天玑1100年度旗舰芯",
+        "nowPrice": 1399,
+        "pePrice":699
+      }, {
+        "id": 14,
+        "src": "http://localhost/xiaomi/img/phone-小米6x.jpg",
+        "name": "Redmi Note 10 5G",
+        "info":"5G小金刚｜旗舰长续航",
+        "nowPrice": 1399,
+        "pePrice":699
+      }, {
+        "id": 15,
+        "src": "http://localhost/xiaomi/img/phone-小米Max2.jpg",
+        "name": "Xiaomi 11 Ultra",
+        "info":"1/1.12''GN2｜2K四微曲屏",
+        "nowPrice": 1399,
+        "pePrice":699
+      }, {
+        "id": 16,
+        "src": "http://localhost/xiaomi/img/phone-小米8SE.jpg",
+        "name": "Xiaomi 11 Pro",
+        "info":"1/1.12''GN2｜骁龙888",
+        "nowPrice": 1399,
+        "pePrice":699
+      }, {
+        "id": 17,
+        "src": "http://localhost/xiaomi/img/phone-小米MIX2S.jpg",
+        "name": "Xiaomi MIX FOLD",
+        "info":"折叠大屏｜自研芯片",
+        "nowPrice": 1399,
+        "pePrice":699
+      }, {
+        "id": 18,
+        "src": "http://localhost/xiaomi/img/phone-小米Max2陶瓷.jpg",
+        "name": "Xiaomi Civi",
+        "info":"Xiaomi Civi",
+        "nowPrice": 1399,
+        "pePrice":699
+      }
+  ]
