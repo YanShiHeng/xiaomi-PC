@@ -32,14 +32,14 @@
         "id": 15,
         "src": "http://localhost/xiaomi/img/phone-小米Max2.jpg",
         "name": "Xiaomi 11 Ultra",
-        "info":"1/1.12''GN2｜2K四微曲屏",
+        "info":"1/1.12 GN2｜2K四微曲屏",
         "nowPrice": 1399,
         "pePrice":699
       }, {
         "id": 16,
         "src": "http://localhost/xiaomi/img/phone-小米8SE.jpg",
         "name": "Xiaomi 11 Pro",
-        "info":"1/1.12''GN2｜骁龙888",
+        "info":"1/1.12 GN2｜骁龙888",
         "nowPrice": 1399,
         "pePrice":699
       }, {

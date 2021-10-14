@@ -28,7 +28,7 @@
 
 .e8 {
     width: 1226px;
-    height: 800px;
+    height: 816px;
     margin: 32px auto 12px;
     overflow: hidden;
 }
@@ -68,8 +68,9 @@
 .f6 {
     width: 480px;
     padding: 30px 50px;
-    border: 1px solid #B0B0B0;
+    border: 1px solid #e0e0e0;
     background-color: #fafafa;
+    padding-right: 67px;
 }
 
 .f7 {
@@ -220,6 +221,9 @@
     line-height: 30px;
     text-align: center;
     box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-right: 27px;
+
 }
 
 .color span:hover {
@@ -232,8 +236,8 @@
     border: 1px solid #ff6700;
 }
 
-.color>span:first-child {
-    margin-right: 10px;
+.color>span:nth-child(2n){
+    margin-right: 0;
 }
 i{
     font-style: normal;
@@ -250,4 +254,43 @@ button{
 }
 .like:hover{
     background-color: #757575;
+}
+.dingwei{
+    position: relative;
+    /* padding-right: 0; */
+    /* padding-left: 30px; */
+}
+.dingwei img{
+    position: absolute;
+    top: 30px;
+    left: 22px;
+    width: 14px;
+    height: 20px;
+}
+.dingwei a{
+    text-decoration: none;
+}
+.dingwei a:hover{
+    color: #ff6400;
+}
+
+.font18{
+    margin-bottom: 20px;
+}
+.explain{
+    background: #f5f5f5;
+}
+.explain h3{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 76px;
+}
+.explain img{
+
+    width: 1226px;
+    height: 189px;
+    margin-bottom: 50px;
+}
+.choice{
+    font-size: 18px;
 }

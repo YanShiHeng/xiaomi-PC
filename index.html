@@ -111,20 +111,22 @@
             </div>
         </div>
     </div>
-    <div class="head_nav" style="min-width: 1226px;">
-        <div class="container head1">
+    <div class="head_nav ">
+        <!-- 物品 -->
+        <div class="head1 clearfix container">
             <div class="leftnav">
                 <ul class="clearfix">
                     <li><a href="http://localhost/xiaomi/index.html"><img src="img/mi-logo.png" class="MIIcon"></a></li>
                     <!-- <li><a href=""><img src="img/nav.gif" class="mishaoIcon"></a></li> -->
-                    <li><a href="">小米</a></li>
-                    <li><a href="">红米</a></li>
-                    <li><a href="">电视</a></li>
-                    <li><a href="">笔记本</a></li>
-                    <li><a href="">空调</a></li>
-                    <li><a href="">新品</a></li>
-                    <li><a href="">路由器</a></li>
-                    <li><a href="">智能硬件</a></li>
+                    <li nav-name="xiaomi"><a href="javascript:void(0);">小米手机</a>
+                    </li>
+                    <li nav-name="redmi"><a href="javascript:void(0);">红米</a></li>
+                    <li nav-name="television"><a href="javascript:void(0);">电视</a></li>
+                    <li nav-name="notebook"><a href="javascript:void(0);">笔记本</a></li>
+                    <li nav-name="airconditioner"><a href="javascript:void(0);">空调</a></li>
+                    <li nav-name="newproducts"><a href="javascript:void(0);">新品</a></li>
+                    <li nav-name="router"><a href="javascript:void(0);">路由器</a></li>
+                    <li nav-name="intelligent"><a href="javascript:void(0);">智能硬件</a></li>
                     <li><a href="">服务</a></li>
                     <li><a href="">社区</a></li>
                 </ul>
@@ -154,9 +156,108 @@
                 </ul>
             </div>
         </div>
+        <!-- 物品菜单 -->
+        <div class="head_content">
+            <ul class="clearfix container">
+                <li class="first"><a href="">
+                        <div class="menu-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="menu-name"></div>
+                        <p><span class="menu-price"></span> 元</p>
+                    </a>
+                </li>
+                <li><a href="">
+                        <div class="menu-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="menu-name"></div>
+                        <p><span class="menu-price"></span> 元</p>
+                    </a>
+                </li>
+                <li><a href="">
+                        <div class="menu-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="menu-name"></div>
+                        <p><span class="menu-price"></span> 元</p>
+                    </a>
+                </li>
+                <li><a href="">
+                        <div class="menu-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="menu-name"></div>
+                        <p><span class="menu-price"></span> 元</p>
+                    </a>
+                </li>
+                <li><a href="">
+                        <div class="menu-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="menu-name"></div>
+                        <p><span class="menu-price"></span> 元</p>
+                    </a>
+                </li>
+                <li><a href="">
+                        <div class="menu-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="menu-name"></div>
+                        <p><span class="menu-price"></span> 元</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="head_content">
+            <ul class="clearfix container">
+                <li class="first"><a href="">
+                        <div class="menu-img">
+                            <img src="./img/jiadian.jpg" alt="">
+                        </div>
+                        <div class="menu-name">Redmi G 2021 Intel版</div>
+                        <p><span class="menu-price"></span> 元</p>
+                    </a></li>
+                <li><a href="">
+                        <div class="menu-img">
+                            <img src="./img/jiadian.jpg" alt="">
+                        </div>
+                        <div class="menu-name">Redmi G 2021 Intel版</div>
+                        <p>5999元</p>
+                    </a></li>
+                <li><a href="">
+                        <div class="menu-img">
+                            <img src="./img/jiadian.jpg" alt="">
+                        </div>
+                        <div class="menu-name">Redmi G 2021 Intel版</div>
+                        <p>5999元</p>
+                    </a></li>
+                <li><a href="">
+                        <div class="menu-img">
+                            <img src="./img/jiadian.jpg" alt="">
+                        </div>
+                        <div class="menu-name">Redmi G 2021 Intel版</div>
+                        <p>5999元</p>
+                    </a></li>
+                <li><a href="">
+                        <div class="menu-img">
+                            <img src="./img/jiadian.jpg" alt="">
+                        </div>
+                        <div class="menu-name">Redmi G 2021 Intel版</div>
+                        <p>5999元</p>
+                    </a></li>
+                <li><a href="">
+                        <div class="menu-img">
+                            <img src="./img/jiadian.jpg" alt="">
+                        </div>
+                        <div class="menu-name">Redmi G 2021 Intel版</div>
+                        <p>5999元</p>
+                    </a></li>
+            </ul>
+        </div> -->
     </div>
     <!--  container   -->
-    <div class="container lunbo clearfix" style="min-width: 1226px;">
+    <div class="container lunbo clearfix">
         <!--  中央轮播大图   -->
         <div id="play" class="play">
             <ul class="imgList">
@@ -342,15 +443,6 @@
                             </div>
                         </li>
                         <li class="phoneInfo">
-                            <div class="goodsPic"><a href=""><img src="img/phone-小米8屏幕指纹版.png" alt="">
-                                </a></div>
-                            <div class="goodsname">Xiaomi MIX 4
-                            </div>
-                            <div class="goodsinfo">CUP全面屏</div>
-                            <div class="goodsprice">
-                                <span class="span1">4999元起</span>
-                            </div>
-                        </li>
                         <li class="phoneInfo">
                             <div class="goodsPic">
                                 <a href="">
@@ -364,56 +456,7 @@
                                 <span class="span2"><del>699</del><del>元</del></span>
                             </div>
                         </li>
-                        <li class="phoneInfo">
-                            <div class="goodsPic"><a href=""><img src="img/phone-小米6x.jpg" alt="">
-                                </a></div>
-                            <div class="goodsname">小米电视4A 55英寸</div>
-                            <div class="goodsinfo">4K HDR,64位处理器</div>
-                            <div class="goodsprice">
-                                <span class="span1">1399元</span>
-                                <span class="span2"><del>699元</del></span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="goodsPic"><a href=""><img src="img/phone-小米8SE.jpg" alt="">
-                                </a></div>
-                            <div class="goodsname">小米电视4A 55英寸</div>
-                            <div class="goodsinfo">4K HDR,64位处理器</div>
-                            <div class="goodsprice">
-                                <span class="span1">1399元</span>
-                                <span class="span2"><del>699元</del></span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="goodsPic"><a href=""><img src="img/phone-小米Max2.jpg" alt="">
-                                </a></div>
-                            <div class="goodsname">小米电视4A 55英寸</div>
-                            <div class="goodsinfo">4K HDR,64位处理器</div>
-                            <div class="goodsprice">
-                                <span class="span1">1399元</span>
-                                <span class="span2"><del>699元</del></span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="goodsPic"><a href=""><img src="img/phone-小米MIX2S.jpg" alt="">
-                                </a></div>
-                            <div class="goodsname">小米电视4A 55英寸</div>
-                            <div class="goodsinfo">4K HDR,64位处理器</div>
-                            <div class="goodsprice">
-                                <span class="span1">1399元</span>
-                                <span class="span2"><del>699元</del></span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="goodsPic"><a href=""><img src="img/phone-小米Max2陶瓷.jpg" alt="">
-                                </a></div>
-                            <div class="goodsname">小米电视4A 55英寸</div>
-                            <div class="goodsinfo">4K HDR,64位处理器</div>
-                            <div class="goodsprice">
-                                <span class="span1">1399元</span>
-                                <span class="span2"><del>699元</del></span>
-                            </div>
-                        </li> -->
+                        -->
                     </ul>
                 </div>
             </div>
@@ -519,7 +562,6 @@
                             </li>
                             <li>
                                 <div class="goodsPic"><a href=""><img src="img/jiadian1.jpg" alt="">
-                                        <div class="bg"></div>
                                     </a></div>
                                 <div class="goodsname">小米电视4A 55英寸</div>
                                 <div class="goodsinfo">4K HDR,64位处理器</div>
@@ -529,7 +571,6 @@
                                 </div>
                             </li>
                         </ul>
-                        
                     </div>
                 </div>
             </div>
@@ -823,6 +864,59 @@
             });
             $$('.phoneGoods-ul').innerHTML = html;
         });
+
+        /********************* 导航栏***********************/
+        let navLi = document.querySelectorAll('.leftnav li');
+        //给每个小li绑定鼠标进入事件
+        navLi.forEach(v => {
+            let navName = v.getAttribute('nav-name');
+            if (navName) {
+                v.addEventListener('mouseenter', function () {
+                    // console.log(navName);
+                    nav(navName);
+                    $$('.head_content').style.height = '220px';
+                    $$('.head_content').style.borderTop = '2px solid #e0e0e0';
+                });
+                v.addEventListener('mouseleave', function () {
+                    $$('.head_content').style.height = '0px';
+                    $$('.head_content').style.borderTop = '0';
+                });
+            }
+        });
+        //往对应导航下的菜单中增加数据
+        function nav(filename) {
+            let path = 'http://localhost/xiaomi/json/' + filename + '.json';
+            ajax.get(path).then(data => {
+                // console.log(JSON.parse(data));
+                // 先转化成对象
+                data = JSON.parse(data);
+                let headContentLi = document.querySelectorAll('.head_content li');
+                let num = 0; //记录遍历次数
+                let len = data.length;
+                headContentLi.forEach(v => {
+                    //如果对应导航下的菜单中能保存的数据的数量大于json中的商品数，则多余的保存盒子高度设置为0
+                    if (num > len-1) {
+                       v.style.display='none';
+                    } else {
+                        v.style.display='block';
+
+                        v.querySelector('.menu-img img').src = data[num].src;
+                        v.querySelector('.menu-name').innerHTML = data[num].name;
+                        v.querySelector('.menu-price').innerHTML = data[num].nowPrice;
+                    }
+                    num++;
+                });
+
+            });
+        }
+        $$('.head_content').addEventListener('mouseenter', function () {
+            this.style.height = '220px';
+            this.style.borderTop = '2px solid #e0e0e0';
+        })
+        $$('.head_content').addEventListener('mouseleave', function () {
+            this.style.height = '0px';
+            this.style.borderTop = '0';
+        })
         //点击加入购物车事件绑定、
         function seeMore(id, src, name, info, nowPrice, pePrice, num, that) {
             //1.获取存入浏览器中的购物车数据
@@ -840,162 +934,6 @@
             location.href = 'http://localhost/xiaomi/details.html';
         }
     </script>
-    <!-- <script>
-        //layer导航
-        layui.use('element', function () {
-            var element = layui.element;
-        });
-
-        //获取节点
-        let username = localStorage.getItem('username');
-        let loginR = $$('.login-r');
-        let userN = $$('#userName');
-        let logout = $$('.logout');
-        let goods = localStorage.getItem('goodsNum');
-        let shoppingCart = $$('.shoppingcart');
-        let content = $$('.con');
-        let cartInfo = $$('.cart-info');
-        // console.log(goods);
-
-
-        //登录模块  获取用户名
-        if (username) {
-            loginR.style.display = 'none';
-            userN.style.display = 'inline-block';
-            $$('.userid').innerHTML = username;
-            $$('.goodsNum').innerHTML = goods;
-            $$('.shoppingcart').style.background = '#ff6700';
-            $$('.shoppingcart a').style.color = '#fff';
-        } else {
-            loginR.style.display = 'inline-block';
-            userN.style.display = 'none';
-        }
-        // 点击退出登录 本地账户信息设置为空
-        logout.addEventListener('click', function () {
-            localStorage.setItem('username', '');
-            location.reload();
-        });
-
-
-
-        // 窗口滚动事件
-        window.onscroll = function () {
-            // 获取滚动条距离顶部的位置  兼容写法
-            let top = document.documentElement.scrollTop || document.body.scrollTop;
-            // console.log(top);
-            if (top > 1200) {
-                $$('.quTop').style.display = 'block';
-                $$('.quTop').style.marginTop = '20px';
-            } else {
-                $$('.quTop').style.display = 'none';
-                $$('.quTop').style.marginTop = '20px';
-            }
-            $$('.quTop').addEventListener('click', function () {
-                document.documentElement.scrollTop = 0;
-            })
-        }
-
-
-        content.addEventListener('mouseenter', function () {
-            // this.getBoundingClientRect().top   得到shoppingCart距离页面顶部的距离
-            let top = this.getBoundingClientRect().top + 65 + 'px';
-            let left = this.getBoundingClientRect().left - 80 + 'px';
-            $$('.cart-msg').style.display = 'block';
-            //layer加载层  里面参数是调节其位置的
-            let index = layer.load(0, {
-                offset: [top, left],
-                shade: false
-            });
-            let time = '';
-            time = setTimeout(() => {
-                layer.close(index);
-                //判断浏览器中的用户名，为空就显示提示信息，反之就显示商品
-                if (username) {
-                    //获取浏览器中保存的商品信息及总数量
-                    // let good=localStorage.getItem('goodsNum');
-                    // console.log(cart==true);
-                    let cart = localStorage.getItem('carts');
-                    cart = JSON.parse(cart);
-
-                    // 判断购物车中是否有商品
-                    if (cart.length != 0) { //有
-                        cartInfo.style.display = 'block';
-                        $$('.cart-msg').style.display = 'none';
-
-                        let html = '';
-                        // 商品总金额
-                        let sumMoney = 0;
-                        //商品总数量
-                        let sumN = 0;
-                        cart.forEach(v => {
-                            sumMoney += v.price * v.num;
-                            sumN += v.num - 0;
-                            html += ` <li>
-                                    <div class="cart-list clearfix">
-                                        <a href="">
-                                            <img src="${v.src}" alt="">
-                                        </a>
-                                        <a href="">
-                                            <p>${v.name}</p>
-                                        </a>
-                                        <span class="rightfix good-del" onclick="delFn(${v.id},this)">×</span>
-                                        <div><span>${v.price}</span>元 x <i>${v.num}</i></div>
-                                    </div>
-                                </li>`;
-                        });
-                        // 更改页面信息
-                        $$('.cart-info ul').innerHTML = html;
-                        $$('.cartsNum').innerHTML = sumN;
-                        $$('.sumMoney').innerHTML = sumMoney;
-                    } else { //无商品
-                        $$('.cart-msg').style.color = '#424242';
-                    }
-
-                } else {
-                    $$('.cart-msg').style.color = '#424242';
-                }
-            }, 1000);
-        })
-
-        shoppingCart.addEventListener('mouseleave', function () {
-            layer.closeAll();
-            $$('.cart-msg').style.display = 'none';
-            cartInfo.style.display = 'none';
-            $$('.cart-msg').style.color = '#fff';
-        })
-
-
-        //商品删除功能
-        function delFn(id, that) {
-            // console.log(window.event);
-            // console.log(that.parentNode.parentNode);
-            let cNum = $$('.cartsNum').innerHTML;
-            let gNum = $$('.goodsNum').innerHTML;
-            let sumM = $$('.sumMoney').innerHTML;
-            let c = localStorage.getItem('carts');
-            c = JSON.parse(c);
-            // console.log(c);
-            // console.log(carts);
-            //删除页面中的商品
-            that.parentNode.parentNode.remove();
-            //删除浏览器中存储的此商品信息
-            c.forEach((v, key) => {
-                if (v.id == id) {
-                    cNum = cNum - v.num;
-                    sumM -= v.price * v.num;
-                    c.splice(key, 1);
-                    localStorage.setItem('goodsNum', cNum)
-                }
-            });
-            // console.log(cNum);
-            // console.log($$('.cartsNum'));
-            $$('.cartsNum').innerHTML = cNum;
-            $$('.goodsNum').innerHTML = cNum;
-            $$('.sumMoney').innerHTML = sumM;
-            // //更新localStorage
-            localStorage.setItem('carts', JSON.stringify(c));
-        }
-    </script> -->
 </body>
 
 </html>

@@ -181,18 +181,28 @@
             <div class="fr f1 main-tow">
                 <h2 class="f2 name"></h2>
                 <p class="f3"><a href="" class="f4">「感恩回馈！限时抢购价仅799元！」</a><span class="info"></span></p>
-                <p class="f4 mt30">小米自营</p>
-                <p class="f4 mt30 font18"><span class="nowP"></span> 元 <span class="f5 preSpan"><i class="preP"></i>
+                <p class="f4 mt10">小米自营</p>
+                <p class="f4 mt10 font18"><span class="nowP"></span> 元 <span class="f5 preSpan"><i class="preP"></i>
                         元</span></p>
                 <hr>
-                <div class="f6 mt20"><img src="" alt="">北京 北京市 海淀区 清河街道 <a href="" class="orange">修改 <br>有现货</a></div>
-                <p class="mt10">选择颜色</p>
-                <div class="color">
-                    <span class="active">白色</span>
-                    <span class="">黑色</span>
+                <div class="f6 mt20 dingwei"><img src="./img/dingwei.png" alt="">北京&nbsp;&nbsp;北京市&nbsp;&nbsp; 海淀区
+                    &nbsp;&nbsp; 清河街道 &nbsp;&nbsp;<a href="javascript:void(0);" class="orange">修改 <br>有现货</a>
+                </div>
+                <p class="mt10 choice">选择版本</p>
+                <div class="color phone-edition">
+                    <span class="active edition"> 6GB+128GB </span>
+                    <span class=""> 4GB+128GB </span>
+                    <span class=""> 8GB+128GB </span>
+                    <span class=""> 8GB+256GB </span>
+
+                </div>
+                <p class="mt10 choice">选择颜色</p>
+                <div class="color phone-color">
+                    <span class="active col"> 白色 </span>
+                    <span class=""> 黑色 </span>
                 </div>
                 <div class="f6 f8 mt20 mb30">
-                    <p class="fl finalName"><span class="name"></span><span class="co"></span></p>
+                    <p class="fl finalName"><span class="name"></span><span class="GB"></span><span class="co"></span></p>
                     <p class="fr"><span class="nowP"></span>元 <span class="f5 preSpan"><i class="preP"></i> 元</span></p>
                     <br>
                     <p class="orange font22 mt30">总计: <span class="nowP"></span> 元</p>
@@ -234,7 +244,12 @@
             </div>
         </div>
     </div>
-
+    <div class="explain">
+        <div class="container">
+            <h3>价格说明</h3>
+            <img src="./img/explain.png" alt="">
+        </div>
+    </div>
 
     <!-- 底部 -->
     <div class="footer">
@@ -483,15 +498,19 @@
     <script src="./js/ajax.js"></script>
     <script src="./js/common.js"></script>
     <script>
+        //获取节点
         let sGood = localStorage.getItem('singleGood');
         sGood = JSON.parse(sGood);
         //   console.log(sGood);
         let name = document.querySelectorAll('.name');
         let nowP = document.querySelectorAll('.nowP');
-        let col = document.querySelectorAll('.color span');
+        let col = document.querySelectorAll('.phone-color span');
+        let edi = document.querySelectorAll('.phone-edition span');
+
         $$('.img').src = sGood.src;
         $$('.info').innerHTML = sGood.info;
-        $$('.co').innerHTML = $$('.active').innerHTML;
+        $$('.GB').innerHTML=$$('.edition').innerHTML;
+        $$('.co').innerHTML = $$('.col').innerHTML;
         name.forEach(v => {
             v.innerHTML = sGood.name;
         });
@@ -505,15 +524,30 @@
                 v.querySelector('.preP').innerHTML = sGood.pePrice;
             });
         }
+        //颜色
         col.forEach(v => {
             v.addEventListener('click', function () {
-                $$('.active').classList.remove('active');
+                $$('.phone-color .active').classList.remove('active');
+                $$('.phone-color .col').classList.remove('col');
+                this.classList.add('col');
                 this.classList.add('active');
+
                 $$('.co').innerHTML = this.innerHTML;
 
             })
         });
+        //版本
+        edi.forEach(v => {
+            v.addEventListener('click', function () {
+                $$('.phone-edition .edition').classList.remove('edition');
+                $$('.phone-edition .active').classList.remove('active');
+                this.classList.add('edition');
+                this.classList.add('active');
 
+                $$('.GB').innerHTML = this.innerHTML;
+
+            })
+        });
         $$('.btn-add').addEventListener('click', function () {
             let obj = {
                 name: $$('.finalName').innerText,
@@ -539,8 +573,8 @@
                 car.push(obj);
             }
             localStorage.setItem('carts', JSON.stringify(car));
-            localStorage.setItem('goods-name',obj.name);
-            location.href='http://localhost/xiaomi/successTip.html';
+            localStorage.setItem('goods-name', obj.name);
+            location.href = 'http://localhost/xiaomi/successTip.html';
         })
     </script>
 </body>
