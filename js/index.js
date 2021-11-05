@@ -62,3 +62,6 @@ function change() {
     btns[lastIndex].classList.remove('current')
     btns[index].classList.add('current')
 }
+
+
+

@@ -24,7 +24,8 @@ let arr = ['小米手机5', '空气净化器2', '活塞耳机', '小米路由器
 let len = arr.length;
 
 
-
+//导航栏
+let navLi = document.querySelectorAll('.leftnav li');
 
 
 //登录模块  获取用户名  固定栏购物车商品数量
@@ -232,3 +233,59 @@ time = setInterval(() => {
     ind = parseInt(Math.random() * len);
     inp.setAttribute('placeholder', arr[ind]);
 }, 5000);
+
+
+
+
+/********************* 导航栏***********************/
+// let navLi = document.querySelectorAll('.leftnav li');
+//给每个小li绑定鼠标进入事件
+navLi.forEach(v => {
+    let navName = v.getAttribute('nav-name');
+    if (navName) {
+        v.addEventListener('mouseenter', function () {
+            // console.log(navName);
+            nav(navName);
+            $$('.head_content').style.height = '220px';
+            $$('.head_content').style.borderTop = '2px solid #e0e0e0';
+        });
+        v.addEventListener('mouseleave', function () {
+            $$('.head_content').style.height = '0px';
+            $$('.head_content').style.borderTop = '0';
+        });
+    }
+});
+//往对应导航下的菜单中增加数据
+function nav(filename) {
+    let path = 'http://localhost/xiaomi/json/' + filename + '.json';
+    ajax.get(path).then(data => {
+        // console.log(JSON.parse(data));
+        // 先转化成对象
+        data = JSON.parse(data);
+        let headContentLi = document.querySelectorAll('.head_content li');
+        let num = 0; //记录遍历次数
+        let len = data.length;
+        headContentLi.forEach(v => {
+            //如果对应导航下的菜单中能保存的数据的数量大于json中的商品数，则多余的保存盒子高度设置为0
+            if (num > len - 1) {
+                v.style.display = 'none';
+            } else {
+                v.style.display = 'block';
+
+                v.querySelector('.menu-img img').src = data[num].src;
+                v.querySelector('.menu-name').innerHTML = data[num].name;
+                v.querySelector('.menu-price').innerHTML = data[num].nowPrice;
+            }
+            num++;
+        });
+
+    });
+}
+$$('.head_content').addEventListener('mouseenter', function () {
+    this.style.height = '220px';
+    this.style.borderTop = '2px solid #e0e0e0';
+})
+$$('.head_content').addEventListener('mouseleave', function () {
+    this.style.height = '0px';
+    this.style.borderTop = '0';
+})

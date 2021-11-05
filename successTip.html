@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的购物车-小米商城</title>
+    <title>成功加入购物车-小米商城</title>
     <link rel="icon" href="./img/mi-logo .ico">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
@@ -14,144 +14,245 @@
 </head>
 
 <body>
-    <!-- 顶部 -->
-    <div class="topbar">
-        <div class="container clearfix">
-            <!--商城项目  -->
-            <div class="leftfix">
-                <a>小米商城</a>
-                <span class="span">|</span>
-                <a>MIUI</a>
-                <span class="span">|</span>
-                <a>loT</a>
-                <span class="span">|</span>
-                <a>云服务</a>
-                <span class="span">|</span>
-                <a>天星数科</a>
-                <span class="span">|</span>
-                <a>有品</a>
-                <span class="span">|</span>
-                <a>小爱开发平台</a>
-                <span class="span">|</span>
-                <a>企业团购</a>
-                <span class="span">|</span>
-                <a>资质证照</a>
-                <span class="span">|</span>
-                <a>协议规则</a>
-                <span class="span">|</span>
-                <a>下载app</a>
-                <span class="span">|</span>
-                <a>智能生活</a>
-                <span class="span">|</span>
-                <a>Select Location</a>
-            </div>
-            <!--登录消息-->
-            <div class="rightfix">
-                <div class="login-r">
-                    <a href="http://localhost/xiaomi/login.html">登录</a>
+        <!-- 顶部 -->
+        <div class="topbar">
+            <div class="container clearfix">
+                <!--商城项目  -->
+                <div class="leftfix">
+                    <a>小米商城</a>
                     <span class="span">|</span>
-                    <a href="http://localhost/xiaomi/login.html?register">注册</a>
+                    <a>MIUI</a>
+                    <span class="span">|</span>
+                    <a>loT</a>
+                    <span class="span">|</span>
+                    <a>云服务</a>
+                    <span class="span">|</span>
+                    <a>天星数科</a>
+                    <span class="span">|</span>
+                    <a>有品</a>
+                    <span class="span">|</span>
+                    <a>小爱开发平台</a>
+                    <span class="span">|</span>
+                    <a>企业团购</a>
+                    <span class="span">|</span>
+                    <a>资质证照</a>
+                    <span class="span">|</span>
+                    <a>协议规则</a>
+                    <span class="span">|</span>
+                    <a>下载app</a>
+                    <span class="span">|</span>
+                    <a>智能生活</a>
+                    <span class="span">|</span>
+                    <a>Select Location</a>
                 </div>
-                <div class="layui-nav leftfix" lay-filter="" id="userName">
-                    <div class="layui-nav-item subuser">
-                        <a href="javascript:;" class="userid">ls</a>
-                        <dl class="layui-nav-child">
-                            <dd><a href="">个人中心</a></dd>
-                            <dd><a href="">评价晒单</a></dd>
-                            <dd><a href="">我的喜欢</a></dd>
-                            <dd><a href="">小米账户</a></dd>
-                            <dd class="logout"><a href="">退出登录</a></dd>
-                        </dl>
+                <!--登录消息-->
+                <div class="rightfix">
+                    <div class="login-r">
+                        <a href="http://localhost/xiaomi/login.html">登录</a>
+                        <span class="span">|</span>
+                        <a href="http://localhost/xiaomi/login.html?register">注册</a>
                     </div>
-                </div>
-                <span class="span">|</span>
-                <a>消息通知</a>
-                <div class="shoppingcart">
-                    <div class="con">
-                        <a href="http://localhost/xiaomi/shopping.html">
-                            <img src="img/sider-shopcar.png" class="shoppingcartIcon">
-                            <span>购物车( <i class="goodsNum">0</i> )</span>
-                        </a>
+                    <div class="layui-nav leftfix" lay-filter="" id="userName">
+                        <div class="layui-nav-item subuser">
+                            <a href="javascript:;" class="userid">ls</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="">个人中心</a></dd>
+                                <dd><a href="">评价晒单</a></dd>
+                                <dd><a href="">我的喜欢</a></dd>
+                                <dd><a href="">小米账户</a></dd>
+                                <dd class="logout"><a href="">退出登录</a></dd>
+                            </dl>
+                        </div>
                     </div>
-                    <!-- 商品列表 -->
-                    <div class="cart ">
-                        <div class="cart-info">
-                            <ul class="clearfix">
-                                <!-- <li>
-                                    <div class="cart-list clearfix">
-                                        <a href="">
-                                            <img src="./img/phone.webp" alt="">
-                                        </a>
-                                        <a href="">
-                                            <p>dadasfagaasfgasfasdafga</p>
-                                        </a>
-                                        <span class="rightfix good-del">×</span>
-                                        <div><span>99</span>元 x <i>20</i></div>
+                    <span class="span">|</span>
+                    <a>消息通知</a>
+                    <div class="shoppingcart">
+                        <div class="con">
+                            <a href="http://localhost/xiaomi/shopping.html">
+                                <img src="img/sider-shopcar.png" class="shoppingcartIcon">
+                                <span>购物车( <i class="goodsNum">0</i> )</span>
+                            </a>
+                        </div>
+                        <!-- 商品列表 -->
+                        <div class="cart ">
+                            <div class="cart-info">
+                                <ul class="clearfix">
+                                    <!-- <li>
+                                        <div class="cart-list clearfix">
+                                            <a href="">
+                                                <img src="./img/phone.webp" alt="">
+                                            </a>
+                                            <a href="">
+                                                <p>dadasfagaasfgasfasdafga</p>
+                                            </a>
+                                            <span class="rightfix good-del">×</span>
+                                            <div><span>99</span>元 x <i>20</i></div>
+                                        </div>
+                                    </li>
+                                  -->
+    
+                                </ul>
+                                <div class="cart-jiesuan clearfix">
+                                    <div class="jiesuan-left leftfix">
+                                        <span>共 <i class="cartsNum">7</i> 件商品</span>
+                                        <span><i class="sumMoney">233</i>元</span>
                                     </div>
-                                </li>
-                              -->
-
-                            </ul>
-                            <div class="cart-jiesuan clearfix">
-                                <div class="jiesuan-left leftfix">
-                                    <span>共 <i class="cartsNum">7</i> 件商品</span>
-                                    <span><i class="sumMoney">233</i>元</span>
+                                    <a href="http://localhost/xiaomi/shopping.html" class="rightfix">去购物车结算</a>
                                 </div>
-                                <a href="http://localhost/xiaomi/shopping.html" class="rightfix">去购物车结算</a>
+                            </div>
+                            <div class="cart-msg">
+                                <p class="cart-msg-p">购物车中还没有商品，赶紧选购吧！</p>
                             </div>
                         </div>
-                        <div class="cart-msg">
-                            <p class="cart-msg-p">购物车中还没有商品，赶紧选购吧！</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="head_nav" style="min-width: 1226px;">
-        <div class="container head1">
-            <div class="leftnav">
-                <ul class="clearfix">
-                    <li><a href="http://localhost/xiaomi/index.html"><img src="img/mi-logo.png" class="MIIcon"></a></li>
-                    <!-- <li><a href=""><img src="img/nav.gif" class="mishaoIcon"></a></li> -->
-                    <li><a href="">小米</a></li>
-                    <li><a href="">红米</a></li>
-                    <li><a href="">电视</a></li>
-                    <li><a href="">笔记本</a></li>
-                    <li><a href="">空调</a></li>
-                    <li><a href="">新品</a></li>
-                    <li><a href="">路由器</a></li>
-                    <li><a href="">智能硬件</a></li>
-                    <li><a href="">服务</a></li>
-                    <li><a href="">社区</a></li>
-                </ul>
-            </div>
-            <div class="rightnav clearfix">
-                <div class="sear clearfix">
-                    <form action="">
-                        <button type="button" class="SearchBtn rightfix"><i id="fa-search"
-                                class="fa fa-search"></i></button>
-                        <input type="text" class="SearchBox rightfix" placeholder="手机">
-                    </form>
+        <div class="head_nav ">
+            <!-- 物品 -->
+            <div class="head1 clearfix container">
+                <div class="leftnav">
+                    <ul class="clearfix">
+                        <li><a href="http://localhost/xiaomi/index.html"><img src="img/mi-logo.png" class="MIIcon"></a></li>
+                        <!-- <li><a href=""><img src="img/nav.gif" class="mishaoIcon"></a></li> -->
+                        <li nav-name="xiaomi"><a href="javascript:void(0);">小米手机</a>
+                        </li>
+                        <li nav-name="redmi"><a href="javascript:void(0);">红米</a></li>
+                        <li nav-name="television"><a href="javascript:void(0);">电视</a></li>
+                        <li nav-name="notebook"><a href="javascript:void(0);">笔记本</a></li>
+                        <li nav-name="airconditioner"><a href="javascript:void(0);">空调</a></li>
+                        <li nav-name="newproducts"><a href="javascript:void(0);">新品</a></li>
+                        <li nav-name="router"><a href="javascript:void(0);">路由器</a></li>
+                        <li nav-name="intelligent"><a href="javascript:void(0);">智能硬件</a></li>
+                        <li><a href="">服务</a></li>
+                        <li><a href="">社区</a></li>
+                    </ul>
                 </div>
-                <ul class="leftfix search_info">
-                    <li><a href="">全部商品</a></li>
-                    <li><a href="">小米手机5</a>
+                <div class="rightnav clearfix">
+                    <div class="sear clearfix">
+                        <form action="">
+                            <button type="button" class="SearchBtn rightfix"><i id="fa-search"
+                                    class="fa fa-search"></i></button>
+                            <input type="text" class="SearchBox rightfix" placeholder="手机">
+                        </form>
+                    </div>
+                    <ul class="leftfix search_info">
+                        <li><a href="">全部商品</a></li>
+                        <li><a href="">小米手机5</a>
+                        </li>
+                        <li><a href="">空气净化器2</a>
+                        </li>
+                        <li><a href="">活塞耳机</a>
+                        </li>
+                        <li><a href="">小米路由器</a>
+                        </li>
+                        <li><a href="">小米插线</a>
+                        </li>
+                        <li><a href="">配件优惠套装</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 物品菜单 -->
+            <div class="head_content">
+                <ul class="clearfix container">
+                    <li class="first"><a href="">
+                            <div class="menu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="menu-name"></div>
+                            <p><span class="menu-price"></span> 元</p>
+                        </a>
                     </li>
-                    <li><a href="">空气净化器2</a>
+                    <li><a href="">
+                            <div class="menu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="menu-name"></div>
+                            <p><span class="menu-price"></span> 元</p>
+                        </a>
                     </li>
-                    <li><a href="">活塞耳机</a>
+                    <li><a href="">
+                            <div class="menu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="menu-name"></div>
+                            <p><span class="menu-price"></span> 元</p>
+                        </a>
                     </li>
-                    <li><a href="">小米路由器</a>
+                    <li><a href="">
+                            <div class="menu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="menu-name"></div>
+                            <p><span class="menu-price"></span> 元</p>
+                        </a>
                     </li>
-                    <li><a href="">小米插线</a>
+                    <li><a href="">
+                            <div class="menu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="menu-name"></div>
+                            <p><span class="menu-price"></span> 元</p>
+                        </a>
                     </li>
-                    <li><a href="">配件优惠套装</a>
+                    <li><a href="">
+                            <div class="menu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="menu-name"></div>
+                            <p><span class="menu-price"></span> 元</p>
+                        </a>
                     </li>
                 </ul>
             </div>
+            <!-- <div class="head_content">
+                <ul class="clearfix container">
+                    <li class="first"><a href="">
+                            <div class="menu-img">
+                                <img src="./img/jiadian.jpg" alt="">
+                            </div>
+                            <div class="menu-name">Redmi G 2021 Intel版</div>
+                            <p><span class="menu-price"></span> 元</p>
+                        </a></li>
+                    <li><a href="">
+                            <div class="menu-img">
+                                <img src="./img/jiadian.jpg" alt="">
+                            </div>
+                            <div class="menu-name">Redmi G 2021 Intel版</div>
+                            <p>5999元</p>
+                        </a></li>
+                    <li><a href="">
+                            <div class="menu-img">
+                                <img src="./img/jiadian.jpg" alt="">
+                            </div>
+                            <div class="menu-name">Redmi G 2021 Intel版</div>
+                            <p>5999元</p>
+                        </a></li>
+                    <li><a href="">
+                            <div class="menu-img">
+                                <img src="./img/jiadian.jpg" alt="">
+                            </div>
+                            <div class="menu-name">Redmi G 2021 Intel版</div>
+                            <p>5999元</p>
+                        </a></li>
+                    <li><a href="">
+                            <div class="menu-img">
+                                <img src="./img/jiadian.jpg" alt="">
+                            </div>
+                            <div class="menu-name">Redmi G 2021 Intel版</div>
+                            <p>5999元</p>
+                        </a></li>
+                    <li><a href="">
+                            <div class="menu-img">
+                                <img src="./img/jiadian.jpg" alt="">
+                            </div>
+                            <div class="menu-name">Redmi G 2021 Intel版</div>
+                            <p>5999元</p>
+                        </a></li>
+                </ul>
+            </div> -->
         </div>
-    </div>
     <!-- 主体 -->
     <section class="page-main">
         <div class="container">

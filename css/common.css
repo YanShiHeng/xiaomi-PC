@@ -15,7 +15,6 @@
     font-size: 12px;
     line-height: 40px;
 }
-
 .topbar a {
     color: #b0b0b0;
 }
@@ -23,6 +22,7 @@
 .topbar a:hover {
     color: #ffffff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .login-r {
@@ -442,7 +442,7 @@
     transition: height .4s;
     z-index: 11;
     background: #fff;
-    
+
 }
 
 .head_content ul {
@@ -601,6 +601,11 @@
     line-height: 28px;
     font-size: 12px;
     display: inline-block;
+}
+
+.footer-link .col-contact .customer-contact:hover {
+    color: #fff;
+    background: #ff6700;
 }
 
 /* 声明信息 */
